@@ -26,3 +26,9 @@ Almaas Izdihar Sant
   
 
 ## How To Run App
+- clone this repo
+- navigate to the project's directory `cd chiper-app-1`
+- run `pdm install`
+- activate virtual env `source .venv/bin/activate`
+- run development server `uvicorn app.main:app --reload`
+- open http://localhost:8000 on the browser
