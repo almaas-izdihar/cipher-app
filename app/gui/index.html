@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cipher App - Almaas</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enkripsi dan Dekripsi</h1>
+      <hr />
+
+      <form id="cipherForm" enctype="multipart/form-data">
+        <label for="cipher">Pilih Algoritma Cipher:</label>
+        <br />
+        <select name="cipher" id="cipher" required>
+          <option value="vigenere">Vigenere Cipher</option>
+          <option value="playfair">Playfair Cipher</option>
+          <option value="hill">Hill Cipher</option>
+        </select>
+        <br />
+        <br />
+
+        <label for="key">Kunci (min 12 karakter):</label>
+        <br />
+        <input type="text" id="key" name="key" minlength="12" required />
+        <br />
+        <br />
+
+        <label for="text_input">Input Content (optional):</label>
+        <br />
+        <textarea
+          id="text_input"
+          name="text_input"
+          rows="4"
+          cols="50"
+          placeholder="Enter text here..."
+        ></textarea>
+        <br />
+
+        <label for="file">atau upload .txt file:</label>
+        <br />
+        <input type="file" id="file" name="file" accept=".txt" />
+        <br />
+        <br />
+
+        <br />
+
+        <button type="button" id="encryptBtn">Encrypt</button>
+        <button type="button" id="decryptBtn">Decrypt</button>
+      </form>
+
+      <br />
+      <hr />
+      <h2>Hasil:</h2>
+      <div id="result"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
